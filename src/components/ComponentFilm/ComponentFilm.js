@@ -10,7 +10,7 @@ class ComponentFilm extends React.Component {
 
     render() {
         return (
-                <Link to={{ pathname: `/home/${this.props.info.id}`, id: this.props.info.id}} className='filmItem'>
+                <Link to={{ pathname: `/themoviedb/home/${this.props.info.id}`, id: this.props.info.id}} className='filmItem'>
                     <img src={`https://image.tmdb.org/t/p/original/${this.props.info.poster_path}`} />
                     <p>{this.props.info.title}</p>
                     <span>{this.props.info.vote_average}</span>

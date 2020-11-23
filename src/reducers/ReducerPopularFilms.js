@@ -37,7 +37,7 @@ const ReducerPopularFilms = (state = InitialState, action) => {
             return {
                 ...state,
                 loading: false,
-                error: action.payload,
+                error: action.e,
             }
 
         case MORE_POPULAR_FILMS_REQUEST:

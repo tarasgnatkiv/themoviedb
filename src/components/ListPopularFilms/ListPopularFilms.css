@@ -18,9 +18,16 @@
     justify-content: center;
 }
 
-@media(max-width:400px) {
+@media(max-width:460px) {
     .popularFilmsComponent h2 {
-        font-size: 26px;
+        font-size: 22px;
     }
 
+    .popularFilmsComponent h2 {
+        margin: 5px 0 20px 0;
+    }
+
+    .popularFilmsComponent {
+        padding: 20px 0;
+    }
 }
