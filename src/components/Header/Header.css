@@ -1,11 +1,30 @@
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ------------------------- */
+
 .header {
     background-color: #151515;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 3px 10px;
-    z-index: 10;
+    z-index: 100;
+    padding: 0 10px;
 }
 
 .headerBody {
@@ -13,14 +32,7 @@
     justify-content: space-between;
 }
 
-/* ================================= */
-.headerRight {
-    /* width: 100%; */
-}
-/* ================================= */
-
-
-.headerLeft {
+.headerNav {
     display: flex;
 }
 
@@ -30,17 +42,19 @@
     font-size: 30px;
     margin: 0 60px 0 0;
     color: #ececec;
-    line-height: 70px;
+    line-height: 80px;
 }
 
 .headerLogo img {
-    height: 70px;
-    margin: 0 10px 0 0;
+    height: 80px;
+    pointer-events: none;
+    margin: 0 -10px;
 }
 
 .headerLogo span {
     color: #ff8b00;
 }
+
 
 .headerList {
     display: flex;
@@ -54,61 +68,30 @@
     letter-spacing: 1px;
     font-size: 17px;
     color: #ececec;
-    line-height: 70px;
+    line-height: 80px;
 }
 
-.headerLink:hover {
+.headerLink:hover, .headerLink:focus {
     color: #ff8b00;
+}
+
+.searchImg {
+    height: 20px;
+    vertical-align: middle;
+    margin: 0 7px 0 0;
 }
 
 .headerBurger {
     display: none;
 }
 
-.headerSearch {
-    display: flex;
-    justify-content: flex-end;
-}
-
-.btnSearch {
-    display: flex;
-    background-color: transparent;
-    line-height: 70px;
-    align-items: center;
-}
-
-.btnSearch img {
-    height: 20px;
-}
-
-.btnSearch p {
-    margin: 0 10px;
-    letter-spacing: 1px;
-    font-size: 17px;
-    color: #ececec;
-}
-
-.btnSearch p:hover {
-    color: #ff8b00;
-}
-
-
-@media (max-width: 820px) {
+@media (max-width: 1000px) {
     body.lock {
         overflow: hidden;
     }
 
-    .closeSearch img {
-        height: 34px;
-        margin: 8px 0 8px 20px;
-    }
-
     .headerLogo img {
         height: 50px;
-    }
-
-    .btnSearch {
-        line-height: 50px;
     }
 
     .headerLogo {
@@ -118,17 +101,12 @@
         font-size: 24px;
     }
 
-    .btnSearch p {
-        display: none;
-    }
-
-
     .headerBurger {
         display: block;
         width: 30px;
         height: 20px;
         position: relative;
-        margin: 15px 0 15px 20px;
+        margin: 15px 0;
     }
 
     .headerBurger span {
