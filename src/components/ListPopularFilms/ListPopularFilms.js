@@ -30,7 +30,7 @@ class ListPopularFilms extends React.Component {
             document.body.clientHeight, document.documentElement.clientHeight
         );
         let myScroll = window.pageYOffset
-        if(!this.props.ReducerPopularFilms.loading && this.props.ReducerPopularFilms.filmsArray && (scrollHeight - myScroll < 1400)) {
+        if(!this.props.ReducerPopularFilms.loading && this.props.ReducerPopularFilms.filmsArray && (scrollHeight - myScroll < 1600)) {
             this.props.MorePopularFilmsAction(this.props.ReducerPopularFilms.nextPage) 
         }
     }
