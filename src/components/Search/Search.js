@@ -1,17 +1,21 @@
 import React from 'react';
-import './Search.css';
+import './Search.css'
 
 class Search extends React.Component {
-    // constructor(props) {
-    //     super(props);
+    constructor(props) {
+        super(props)
+    }
 
-    // }
+
 
     render() {
-        return (
-                <input />
+        return(
+            <div className='search'>
+
+            </div>
         );
     }
+
 }
 
 export default Search;

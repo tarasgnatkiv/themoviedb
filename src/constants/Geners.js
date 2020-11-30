@@ -1,0 +1,3 @@
+export const GENERS_REQUEST = 'GENERS_REQUEST';
+export const GENERS_SUCCESS = 'GENERS_SUCCESS';
+export const GENERS_FAIL = 'GENERS_FAIL';

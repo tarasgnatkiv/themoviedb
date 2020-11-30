@@ -37,28 +37,3 @@ body {
         margin: 70px 5px 20px;
     }
 }
-
-
-
-.App1 {
-    max-width: 600px;
-    height: 600px;
-    background-color: blue;
-    margin: 10px auto;
-}
-
-.App2 {
-    max-width: 600px;
-
-    height: 600px;
-    margin: 10px auto;
-    background-color: red;
-}
-
-.App3 {
-    max-width: 600px;
-
-    height: 600px;
-    background-color: wheat;
-    margin: 10px auto;
-}

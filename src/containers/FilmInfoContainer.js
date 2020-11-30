@@ -1,5 +1,5 @@
 import { connect } from 'react-redux';
-import { FilmInfoAction } from '../actions/FilmInfo';
+import { FilmInfoAction, FilmTrailerAction } from '../actions/FilmInfo';
 import FilmInfo from '../components/FilmInfo/FilmInfo';
 
 const mapStateToProps = (state) => ({
@@ -9,6 +9,7 @@ const mapStateToProps = (state) => ({
 const mapDispatchToProps = dispatch => {
     return {
         FilmInfoAction: FilmInfoAction(dispatch),
+        FilmTrailerAction: FilmTrailerAction(dispatch)
     }
 };
 

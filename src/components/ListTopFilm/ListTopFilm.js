@@ -1,21 +1,22 @@
 import React from 'react';
-import ComponentFilm from '../ComponentFilm/ComponentFilm';
-import './ListPopularFilms.css';
+import TopFilm from '../TopFilm/TopFilm';
+import './ListTopFilm.css';
 
 
-class ListPopularFilms extends React.Component {
+class ListTopFilm extends React.Component {
     constructor(props) {
         super(props);
-        this.showPopularFilms = this.showPopularFilms.bind(this);
+        this.showTopFilms = this.showTopFilms.bind(this);
         this.checkScroll = this.checkScroll.bind(this);
     }
 
-    showPopularFilms() {
+    showTopFilms() {
         let filmsArr;
 
-        if (this.props.ReducerPopularFilms.filmsArray) {
-            filmsArr = this.props.ReducerPopularFilms.filmsArray.map(i =>
-                <ComponentFilm info={i} />
+        if (this.props.TopFilmsR.topFilmsArray) {
+            filmsArr = this.props.TopFilmsR.topFilmsArray.map(i =>
+                <TopFilm info={i} />
+                // <button>{i.id}</button>
             );
         } else {
             filmsArr = <div>Loading</div>
@@ -30,13 +31,13 @@ class ListPopularFilms extends React.Component {
             document.body.clientHeight, document.documentElement.clientHeight
         );
         let myScroll = window.pageYOffset
-        if (!this.props.ReducerPopularFilms.loading && this.props.ReducerPopularFilms.filmsArray && (scrollHeight - myScroll < 1600)) {
-            this.props.MorePopularFilmsAction(this.props.ReducerPopularFilms.nextPage)
+        if (!this.props.TopFilmsR.loading && this.props.TopFilmsR.topFilmsArray && (scrollHeight - myScroll < 1600)) {
+            this.props.MoreTopFilmsAction(this.props.TopFilmsR.nextPage)
         }
     }
 
     componentDidMount() {
-        this.props.PopularFilmsAction()
+        this.props.TopFilmsAction()
         window.addEventListener('scroll', this.checkScroll);
 
     }
@@ -46,14 +47,15 @@ class ListPopularFilms extends React.Component {
     }
 
     render() {
+        console.log(this.props)
         return (
-
+            
             <div className='container'>
                 <div className='AppContent'>
                     <div className='popularFilmsComponent'>
-                        <h2>Popular movie right now</h2>
+                        <h2>Top movie for all time</h2>
                         <div className='popularFilmsContainer' onScroll={this.checkScroll}>
-                            {this.showPopularFilms()}
+                            {this.showTopFilms()}
                         </div>
                     </div>
                 </div>
@@ -64,4 +66,4 @@ class ListPopularFilms extends React.Component {
 
 }
 
-export default ListPopularFilms;
+export default ListTopFilm;
