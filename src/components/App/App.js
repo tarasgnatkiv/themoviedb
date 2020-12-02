@@ -7,7 +7,8 @@ import FilmInfo from '../../containers/FilmInfoContainer';
 import Footer from '../Footer/Footer';
 import TopFilmsC from '../../containers/TopFilmsC';
 import GenersCont from '../../containers/GenersCont';
-import ListGenerFilm from '../ListGenerFilm/ListGenerFilm';
+import ListGenerCont from '../../containers/ListGenerCont';
+import SearchCont from '../../containers/SearchCont'
 
 
 function App() {
@@ -24,7 +25,9 @@ function App() {
                         <Route exact path='/themoviedb/top250' component={TopFilmsC} />
                         <Route exact path='/themoviedb/top250/:id' component={FilmInfo} />
                         <Route exact path='/themoviedb/category' component={GenersCont} />
-                        <Route exact path='/themoviedb/category/:name' component={ListGenerFilm} />
+                        <Route exact path='/themoviedb/category/:name' component={ListGenerCont} />
+                        <Route exact path='/themoviedb/search' component={SearchCont} />
+
 
                     </Switch>
                 {/* </div> */}

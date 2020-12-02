@@ -14,7 +14,7 @@ class Geners extends React.Component {
             filmsArr = this.props.GenersR.geners.map(i =>
                 <div className='GenerItem'>
                     <Link
-                        to={{ pathname: `/themoviedb/category/${i.id}`}}> 
+                        to={{ pathname: `/themoviedb/category/${i.id}`, state: i.name }}> 
                         {i.name}
                     </Link>
                 </div>
@@ -30,6 +30,8 @@ class Geners extends React.Component {
 
     componentDidMount() {
         this.props.GenersAction()
+        window.scrollTo(0, 0)
+
     }
 
     // componentWillUnmount() {

@@ -38,7 +38,7 @@ class ListPopularFilms extends React.Component {
     componentDidMount() {
         this.props.PopularFilmsAction()
         window.addEventListener('scroll', this.checkScroll);
-
+        window.scrollTo(0, 0)
     }
 
     componentWillUnmount() {

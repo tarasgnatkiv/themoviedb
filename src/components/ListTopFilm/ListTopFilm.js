@@ -39,7 +39,7 @@ class ListTopFilm extends React.Component {
     componentDidMount() {
         this.props.TopFilmsAction()
         window.addEventListener('scroll', this.checkScroll);
-
+        window.scrollTo(0, 0)
     }
 
     componentWillUnmount() {
