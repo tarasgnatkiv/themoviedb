@@ -8,7 +8,8 @@ import Footer from '../Footer/Footer';
 import TopFilmsC from '../../containers/TopFilmsC';
 import GenersCont from '../../containers/GenersCont';
 import ListGenerCont from '../../containers/ListGenerCont';
-import SearchCont from '../../containers/SearchCont'
+import SearchCont from '../../containers/SearchCont';
+// import Favorite from '../Favorite/Favorite'
 
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
                         <Route exact path='/themoviedb/category' component={GenersCont} />
                         <Route exact path='/themoviedb/category/:name' component={ListGenerCont} />
                         <Route exact path='/themoviedb/search' component={SearchCont} />
+                        {/* <Route exact path='/themoviedb/favorite' component={Favorite} /> */}
 
 
                     </Switch>

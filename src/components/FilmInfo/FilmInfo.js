@@ -100,6 +100,7 @@ class FilmInfo extends React.Component {
         this.showFilmInfo = this.showFilmInfo.bind(this);
         // this.showGeners = this.showGeners.bind(this);
         this.getTrailer = this.getTrailer.bind(this);
+        this.checkFavoriteFilm = this.checkFavoriteFilm.bind(this);
     }
 
     componentDidMount() {
@@ -109,12 +110,29 @@ class FilmInfo extends React.Component {
         this.getTrailer()
 
         window.scrollTo(0, 0)
+
+        this.checkFavoriteFilm()
+    }
+
+    componentDidUpdate() {
+        this.checkFavoriteFilm()
+
     }
 
     getTrailer() {
         if (this.props.ReducerFilmInfo.trailer && this.props.ReducerFilmInfo.trailer[0]) {
             const firstTrailer = this.props.ReducerFilmInfo.trailer[0].key
             return firstTrailer;
+        }
+    }
+
+    checkFavoriteFilm() {
+        if(this.props.FavoriteR.favoriteArr && this.props.FavoriteR.favoriteArr.length > 0) {
+            this.props.FavoriteR.favoriteArr.filter(function(i) {
+                if(i.id === this.props.match.params.id) {
+                    return false;
+                }
+            })
         }
     }
 
@@ -131,6 +149,9 @@ class FilmInfo extends React.Component {
                                 <h3>{film.title} (<span>{relaseDate}</span>)</h3>
                                 <h4>{film.tagline}</h4>
                                 <img src={`https://image.tmdb.org/t/p/original/${film.poster_path}`} alt='' />
+                                {/* <div>
+                                    <button onClick={() => this.props.AddFavoriteFilmAction(this.props.ReducerFilmInfo.currnetFilm)}>Favorite</button>
+                                </div> */}
                             </div>
                             <div class="videowrap">
                                 <div class="videoblock">

@@ -53,6 +53,9 @@ class Header extends React.Component {
                                                 Search
                                             </Link>
                                         </li>
+                                        {/* <li>
+                                            <Link to={'/themoviedb/favorite'} className="headerLink" onClick={this.handleClick}>Favorite</Link>
+                                        </li> */}
                                     </ul>
                                 </nav>
                             </div>

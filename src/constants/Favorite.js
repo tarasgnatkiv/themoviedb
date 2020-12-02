@@ -1,0 +1,1 @@
+export const ADD_FAVORITE_FILM = 'ADD_FAVORITE_FILM';
