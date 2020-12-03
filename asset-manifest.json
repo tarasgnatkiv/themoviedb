@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/themoviedb/static/css/main.d84c2bec.chunk.css",
-    "main.js": "/themoviedb/static/js/main.ebd2f34f.chunk.js",
-    "main.js.map": "/themoviedb/static/js/main.ebd2f34f.chunk.js.map",
+    "main.css": "/themoviedb/static/css/main.e789029e.chunk.css",
+    "main.js": "/themoviedb/static/js/main.69e6f8d3.chunk.js",
+    "main.js.map": "/themoviedb/static/js/main.69e6f8d3.chunk.js.map",
     "runtime-main.js": "/themoviedb/static/js/runtime-main.a799c89b.js",
     "runtime-main.js.map": "/themoviedb/static/js/runtime-main.a799c89b.js.map",
     "static/js/2.41e30372.chunk.js": "/themoviedb/static/js/2.41e30372.chunk.js",
     "static/js/2.41e30372.chunk.js.map": "/themoviedb/static/js/2.41e30372.chunk.js.map",
     "index.html": "/themoviedb/index.html",
-    "static/css/main.d84c2bec.chunk.css.map": "/themoviedb/static/css/main.d84c2bec.chunk.css.map",
+    "static/css/main.e789029e.chunk.css.map": "/themoviedb/static/css/main.e789029e.chunk.css.map",
     "static/js/2.41e30372.chunk.js.LICENSE.txt": "/themoviedb/static/js/2.41e30372.chunk.js.LICENSE.txt",
     "static/media/facebook.6c83ee5c.png": "/themoviedb/static/media/facebook.6c83ee5c.png",
     "static/media/gmail.13677138.png": "/themoviedb/static/media/gmail.13677138.png",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.a799c89b.js",
     "static/js/2.41e30372.chunk.js",
-    "static/css/main.d84c2bec.chunk.css",
-    "static/js/main.ebd2f34f.chunk.js"
+    "static/css/main.e789029e.chunk.css",
+    "static/js/main.69e6f8d3.chunk.js"
   ]
 }
