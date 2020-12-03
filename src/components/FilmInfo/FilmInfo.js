@@ -101,6 +101,8 @@ class FilmInfo extends React.Component {
         // this.showGeners = this.showGeners.bind(this);
         this.getTrailer = this.getTrailer.bind(this);
         this.checkFavoriteFilm = this.checkFavoriteFilm.bind(this);
+        // this.getGeners = this.getGeners.bind(this);
+
     }
 
     componentDidMount() {
@@ -127,19 +129,29 @@ class FilmInfo extends React.Component {
     }
 
     checkFavoriteFilm() {
-        if(this.props.FavoriteR.favoriteArr && this.props.FavoriteR.favoriteArr.length > 0) {
-            this.props.FavoriteR.favoriteArr.filter(function(i) {
-                if(i.id === this.props.match.params.id) {
+        if (this.props.FavoriteR.favoriteArr && this.props.FavoriteR.favoriteArr.length > 0) {
+            this.props.FavoriteR.favoriteArr.filter(function (i) {
+                if (i.id === this.props.match.params.id) {
                     return false;
                 }
             })
         }
     }
 
+    
+
     showFilmInfo() {
         if (this.props.ReducerFilmInfo.currnetFilm) {
             const film = this.props.ReducerFilmInfo.currnetFilm;
             const relaseDate = `${film.release_date[0]}${film.release_date[1]}${film.release_date[2]}${film.release_date[3]}`;
+
+            // getGeners() {
+            //     if (this.props.ReducerFilmInfo.currnetFilm) {
+            //         this.props.ReducerFilmInfo.currnetFilm.genres.map(i => {
+            //             return <div className='geners'>{i.name}</div>
+            //         })
+            //     }
+            // }
 
             return (
                 <>
@@ -155,10 +167,16 @@ class FilmInfo extends React.Component {
                             </div>
                             <div class="videowrap">
                                 <div class="videoblock">
-                                    
+
                                     <iframe width="560" height="315" src={`https://www.youtube.com/embed/${this.getTrailer()}`}></iframe>
                                 </div>
                             </div>
+
+                        </div>
+                        <div className='overview'>
+                            <p>
+                                Overview: {film.overview}
+                            </p>
                         </div>
                     </div>
                 </>

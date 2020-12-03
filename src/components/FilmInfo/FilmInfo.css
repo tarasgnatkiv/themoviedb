@@ -102,3 +102,11 @@ embed {
         width: 95%;
     }
 }
+
+.overview {
+    color: #ececec;
+    font-size: 24px;
+    letter-spacing: 1px;
+    margin: 30px auto;
+    max-width: 1400px;
+}
